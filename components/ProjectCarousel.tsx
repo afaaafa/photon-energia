@@ -3,56 +3,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import ProjectCard from "./ProjectCard";
+import { projects } from "@/public/projects/projects";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const projects = [
-  {
-    id: 1,
-    title: "Projeto Residencial Solar",
-    description:
-      "Instalação de sistema fotovoltaico em residência de alto padrão",
-    images: [
-      "/projects/marta-oliveira/1.jpg",
-      "/projects/marta-oliveira/2.jpg",
-      "/projects/marta-oliveira/3.jpg",
-      "/projects/marta-oliveira/4.jpg",
-      "/projects/marta-oliveira/5.jpg",
-    ],
-    location: "Belo Horizonte, MG",
-    capacity: "5.5 kWp",
-    link: "/projetos/residencial-1",
-  },
-  {
-    id: 2,
-    title: "Projeto Comercial",
-    description: "Sistema solar para empresa de médio porte",
-    images: [
-      "/projects/joao-kleber/1.jpg",
-      "/projects/joao-kleber/2.jpg",
-      "/projects/joao-kleber/3.jpg",
-    ],
-    location: "São Paulo, SP",
-    capacity: "15 kWp",
-    link: "/projetos/comercial-1",
-  },
-  {
-    id: 3,
-    title: "Projeto Industrial",
-    description: "Implementação de energia solar em fábrica",
-    images: [
-      "/projects/fernando-macedo/1.jpg",
-      "/projects/fernando-macedo/2.jpg",
-      "/projects/fernando-macedo/3.jpg",
-    ],
-    location: "Rio de Janeiro, RJ",
-    capacity: "50 kWp",
-    link: "/projetos/industrial-1",
-  },
-];
+console.log(projects);
 
 const ProjectCarousel = () => {
   return (
@@ -91,7 +49,7 @@ const ProjectCarousel = () => {
           className="project-swiper"
         >
           {projects.map((project) => (
-            <SwiperSlide key={project.id}>
+            <SwiperSlide key={project.id} className="pb-6">
               <ProjectCard {...project} />
             </SwiperSlide>
           ))}

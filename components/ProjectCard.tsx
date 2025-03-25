@@ -1,17 +1,8 @@
-"use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  location: string;
-  capacity: string;
-  images: string[];
-  link: string;
-}
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { MapPin, Users, ArrowRight } from 'lucide-react';
 
 const ProjectCard = ({
   title,
@@ -22,7 +13,6 @@ const ProjectCard = ({
   link,
 }: ProjectCardProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -33,113 +23,83 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div
-        className="relative h-64"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+    <motion.div 
+      className="group bg-white rounded-xl border border-gray-200 overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="relative h-56 overflow-hidden">
         <Image
           src={images[currentImageIndex]}
           alt={`${title} - Imagem ${currentImageIndex + 1}`}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
+        
         {images.length > 1 && (
-          <>
-            <button
+          <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <motion.button
               onClick={previousImage}
-              className={`absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all duration-300 ${
-                isHovered
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-4"
-              }`}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-md"
               aria-label="Imagem anterior"
             >
-              <svg
-                className="w-5 h-5 text-gray-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
+              <ArrowRight className="w-5 h-5 text-gray-800 rotate-180" />
+            </motion.button>
+            <motion.button
               onClick={nextImage}
-              className={`absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all duration-300 ${
-                isHovered
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-4"
-              }`}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-md"
               aria-label="Próxima imagem"
             >
-              <svg
-                className="w-5 h-5 text-gray-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-            <div
-              className={`absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 transition-opacity duration-300 ${
-                isHovered ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentImageIndex ? "bg-white" : "bg-white/50"
-                  }`}
-                  aria-label={`Ir para imagem ${index + 1}`}
-                />
-              ))}
-            </div>
-          </>
+              <ArrowRight className="w-5 h-5 text-gray-800" />
+            </motion.button>
+          </div>
         )}
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
-          <span>{location}</span>
-          <span>{capacity}</span>
+        
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentImageIndex ? "bg-white" : "bg-white/50"
+              }`}
+            />
+          ))}
         </div>
+      </div>
+      
+      <div className="p-6 space-y-4">
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2 truncate">{title}</h3>
+          <p className="text-gray-600 line-clamp-2">{description}</p>
+        </div>
+        
+        <div className="flex items-center justify-between text-sm text-gray-500 space-x-4">
+          <div className="flex items-center space-x-2">
+            <MapPin className="w-4 h-4 text-[#5ab7de] hover:text-[#4aa0c4]" />
+            <span className="truncate max-w-[150px]">{location}</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Users className="w-4 h-4 text-green-500" />
+            <span>{capacity}</span>
+          </div>
+        </div>
+        
         <Link
           href={link}
-          className="inline-flex items-center text-[#2ecc71] hover:text-[#27ae60] transition-colors"
+          className="group/link flex items-center text-[#5ab7de] hover:text-[#4aa0c4] font-semibold transition-colors"
         >
           Ver mais detalhes
-          <svg
-            className="w-4 h-4 ml-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+          <ArrowRight 
+            className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" 
+          />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
