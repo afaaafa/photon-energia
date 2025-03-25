@@ -11,7 +11,7 @@ const ProjectCard = ({
   capacity,
   images,
   link,
-}: ProjectCardProps) => {
+}: any) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -61,7 +61,7 @@ const ProjectCard = ({
         )}
         
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          {images.map((_, index) => (
+          {images.map((_:any, index:any) => (
             <div
               key={index}
               className={`w-2 h-2 rounded-full transition-colors ${

@@ -129,7 +129,7 @@ const Navbar = () => {
 
             {/* Quote Button */}
             <Link
-              href="/orcamento"
+              href="https://wa.me/553199595991?text=Ol%C3%A1,%20vi%20seu%20site%20e%20quero%20fazer%20um%20or%C3%A7amento."
               className="btn-quote inline-flex items-center px-8 py-3 border border-transparent text-sm font-semibold rounded-full text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
               <svg
@@ -220,7 +220,7 @@ const Navbar = () => {
 
             <div className="mt-4 px-3">
               <Link
-                href="/orcamento"
+                href="https://wa.me/553199595991?text=Ol%C3%A1,%20vi%20seu%20site%20e%20quero%20fazer%20um%20or%C3%A7amento."
                 className="btn-quote block text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white"
               >
                 FAÇA UM ORÇAMENTO
