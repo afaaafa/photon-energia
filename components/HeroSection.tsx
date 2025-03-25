@@ -67,7 +67,7 @@ const HeroSection = () => {
   }, [activeSlide]);
 
   return (
-    <section className="relative min-h-screen">
+    <section className="relative w-full">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation]}
         effect="fade"
@@ -84,7 +84,7 @@ const HeroSection = () => {
           setActiveSlide(swiper.activeIndex);
           setIsZoomed(false);
         }}
-        className="h-screen"
+        className="h-[500px] md:h-[600px]"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} className="relative">
@@ -105,22 +105,22 @@ const HeroSection = () => {
             <div className="relative z-10 h-full flex items-center">
               <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-center">
-                  <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
+                  <h2 className="subheading-hero text-4xl md:text-5xl text-white mb-4 opacity-0 translate-y-8 animate-fade-up">
                     {slide.subtitle}
                   </h2>
-                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                  <h1 className="heading-hero text-5xl md:text-7xl text-white mb-6 opacity-0 translate-y-8 animate-fade-up animation-delay-200">
                     {slide.title}
                   </h1>
-                  <p className="text-xl text-white/90 mb-8">
+                  <p className="body-text text-xl text-white/90 mb-8 opacity-0 translate-y-8 animate-fade-up animation-delay-400">
                     {slide.description}
                   </p>
                   <a
                     href="/orcamento"
-                    className="inline-flex items-center px-8 py-4 border-2 border-[#2ecc71] text-base font-medium rounded-full text-white bg-[#2ecc71] hover:bg-transparent transition-all duration-300"
+                    className="body-text inline-flex items-center px-6 py-3 border border-white/20 text-base font-medium rounded-full text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 opacity-0 translate-y-8 animate-fade-up animation-delay-600"
                   >
                     Solicite seu orçamento
                     <svg
-                      className="w-5 h-5 ml-2"
+                      className="w-4 h-4 ml-2"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

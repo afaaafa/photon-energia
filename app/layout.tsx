@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const montserrat = Montserrat({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-source-sans",
 });
 
 export const metadata: Metadata = {
@@ -19,15 +22,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="pt-br">
-      <Navbar />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="pt-BR" className={`${montserrat.variable} ${sourceSans.variable}`}>
+      <body>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -8,8 +8,8 @@
   --secondary: #f8fafc;
   --text-primary: #1a1a1a;
   --text-secondary: #4b5563;
-  --orange: #ff6634;
-  --orange-hover: #e55a2d;
+  --orange: #ff6b35;
+  --orange-hover: #ff5a1f;
   --green: #2ecc71;
   --green-hover: #27ae60;
   --navbar-bg: #1e1e1e;
@@ -121,6 +121,34 @@ body {
   background-color: var(--green-hover);
 }
 
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
 /* Swiper custom styles */
 .project-swiper {
   padding: 2rem 0;
@@ -164,4 +192,30 @@ body {
   .project-swiper .swiper-button-prev {
     display: none;
   }
+}
+
+/* Typography */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat);
+  }
+
+  body {
+    font-family: var(--font-source-sans);
+  }
+}
+
+.heading-hero {
+  @apply font-bold tracking-tight;
+  font-family: var(--font-montserrat);
+}
+
+.subheading-hero {
+  @apply font-light tracking-wide;
+  font-family: var(--font-montserrat);
+}
+
+.body-text {
+  @apply leading-relaxed;
+  font-family: var(--font-source-sans);
 }
