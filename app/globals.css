@@ -196,7 +196,12 @@ body {
 
 /* Typography */
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-montserrat);
   }
 
@@ -218,4 +223,8 @@ body {
 .body-text {
   @apply leading-relaxed;
   font-family: var(--font-source-sans);
+}
+
+html {
+  scroll-behavior: smooth;
 }

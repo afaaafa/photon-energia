@@ -14,11 +14,11 @@ console.log(projects);
 
 const ProjectCarousel = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="projetos" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Nossos Projetos Recentes
+          <h2 className="text-3xl font-extrabold text-gray-800 text-center mb-6">
+            Nossos Projetos
           </h2>
           <p className="text-lg text-gray-600">
             Conheça alguns dos nossos projetos de energia solar
@@ -49,7 +49,7 @@ const ProjectCarousel = () => {
           className="project-swiper"
         >
           {projects.map((project) => (
-            <SwiperSlide key={project.id} className="pb-6">
+            <SwiperSlide key={project.id} className="pb-12">
               <ProjectCard {...project} />
             </SwiperSlide>
           ))}
