@@ -52,11 +52,12 @@ const Footer: React.FC = () => {
           <ul className="space-y-4 text-lg">
             <li className="flex items-center justify-center md:justify-start">
               <MapPin className="mr-3" size={22} />
-              Rua Zodíaco 914 - Santa Lúcia, BH - MG
+              Rua Cônsul Robert Levy, n° 1.010, 
+              São Bento 30350-710 – Belo Horizonte – MG
             </li>
             <li className="flex items-center justify-center md:justify-start">
               <Phone className="mr-3" size={22} />
-              +55 (31) 3471-2238
+              (31) 3291-9143
             </li>
             <li className="flex items-center justify-center md:justify-start">
               <Mail className="mr-3" size={22} />

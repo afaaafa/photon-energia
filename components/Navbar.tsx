@@ -112,7 +112,7 @@ const Navbar = () => {
                   alt="Photon Energia Logo"
                   width={180}
                   height={65}
-                  className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                  className="h-16 w-auto"
                   priority
                 />
                 <div className="ml-4 border-l border-gray-700 pl-4">

@@ -36,7 +36,6 @@ html,
 body {
   background-color: #ffffff;
   color: var(--text-primary);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Custom utility classes */
