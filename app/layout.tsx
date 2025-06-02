@@ -18,6 +18,9 @@ const sourceSans = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Photon Energia",
   description: "Photon Energia",
+  icons: {
+    icon: '/favicon.ico',
+  }
 };
 
 export default function RootLayout({

@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Sun, GaugeCircle, Ruler, Zap } from "lucide-react";
@@ -26,17 +25,17 @@ const SolarSimulatorSection: React.FC = () => {
   const [result, setResult] = React.useState<ResultData | null>(null);
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-white py-16 px-4">
+    <section className="bg-gradient-to-br bg-[#1b2f5c] py-16 px-4">
       <motion.div
         className="max-w-5xl mx-auto text-center"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
           Simule seu Sistema Solar
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+        <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-12">
           Descubra de forma simples e visual como a energia solar pode
           transformar seu consumo de energia.
         </p>
@@ -46,7 +45,7 @@ const SolarSimulatorSection: React.FC = () => {
 
       {result && (
         <motion.div
-          className="mt-16 max-w-4xl mx-auto bg-white rounded-2xl p-6 shadow-xl"
+          className="mt-16 max-w-4xl mx-auto bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}

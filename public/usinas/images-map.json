@@ -1,0 +1,108 @@
+{
+  "industrial": {
+    "sempel": {
+      "name": "Sempel",
+      "images": [
+        "/usinas/industrial/sempel/1.jpeg",
+        "/usinas/industrial/sempel/2.jpeg",
+        "/usinas/industrial/sempel/3.jpeg",
+        "/usinas/industrial/sempel/4.jpeg",
+        "/usinas/industrial/sempel/5.jpeg",
+        "/usinas/industrial/sempel/6.jpeg"
+      ]
+    },
+    "cooperativa_abaete": {
+      "name": "Cooperativa Abaeté",
+      "images": [
+        "/usinas/industrial/cooperativa_abaete/1.jpeg",
+        "/usinas/industrial/cooperativa_abaete/2.jpeg",
+        "/usinas/industrial/cooperativa_abaete/3.jpeg",
+        "/usinas/industrial/cooperativa_abaete/4.jpeg",
+        "/usinas/industrial/cooperativa_abaete/5.jpeg"
+      ]
+    },
+    "unai": {
+      "name": "Unaí",
+      "images": [
+        "/usinas/industrial/unai/1.jpg",
+        "/usinas/industrial/unai/2.jpg",
+        "/usinas/industrial/unai/3.jpg"
+      ]
+    },
+    "super_so": {
+      "name": "Super-So",
+      "images": [
+        "/usinas/industrial/super_so/1.jpg",
+        "/usinas/industrial/super_so/2.jpg",
+        "/usinas/industrial/super_so/3.jpg"
+      ]
+    },
+    "hospital_abaete": {
+      "name": "Hospital Abaeté",
+      "images": [
+        "/usinas/industrial/hospital_abaete/1.jpg",
+        "/usinas/industrial/hospital_abaete/2.jpg",
+        "/usinas/industrial/hospital_abaete/3.jpg",
+        "/usinas/industrial/hospital_abaete/4.jpg",
+        "/usinas/industrial/hospital_abaete/5.jpg",
+        "/usinas/industrial/hospital_abaete/6.jpg",
+        "/usinas/industrial/hospital_abaete/7.jpg",
+        "/usinas/industrial/hospital_abaete/8.jpg"
+      ]
+    }
+  },
+  "residencial": {
+    "residencial_01": {
+      "name": "Residencial 01",
+      "images": [
+        "/usinas/residencial/residencial_01/1.jpeg",
+        "/usinas/residencial/residencial_01/2.jpeg",
+        "/usinas/residencial/residencial_01/3.jpeg",
+        "/usinas/residencial/residencial_01/4.jpeg",
+        "/usinas/residencial/residencial_01/5.jpeg",
+        "/usinas/residencial/residencial_01/6.jpeg"
+      ]
+    },
+    "residencial_02": {
+      "name": "Residencial 02",
+      "images": [
+        "/usinas/residencial/residencial_02/1.jpeg",
+        "/usinas/residencial/residencial_02/2.jpeg",
+        "/usinas/residencial/residencial_02/3.jpeg",
+        "/usinas/residencial/residencial_02/4.jpeg",
+        "/usinas/residencial/residencial_02/5.jpeg",
+        "/usinas/residencial/residencial_02/6.jpeg",
+        "/usinas/residencial/residencial_02/7.jpeg"
+      ]
+    },
+    "residencial_03": {
+      "name": "Residencial 03",
+      "images": [
+        "/usinas/residencial/residencial_03/1.jpg",
+        "/usinas/residencial/residencial_03/2.jpg"
+      ]
+    },
+    "residencial_04": {
+      "name": "Residencial 04",
+      "images": [
+        "/usinas/residencial/residencial_04/1.jpg",
+        "/usinas/residencial/residencial_04/2.jpg"
+      ]
+    },
+    "residencial_05": {
+      "name": "Residencial 05",
+      "images": [
+        "/usinas/residencial/residencial_05/1.jpg"
+      ]
+    }
+  },
+  "rural": {
+    "rural_paineras": {
+      "name": "Rural Paineiras",
+      "images": [
+        "/usinas/rural/rural_paineras/1.jpeg",
+        "/usinas/rural/rural_paineras/2.jpeg"
+      ]
+    }
+  }
+} 

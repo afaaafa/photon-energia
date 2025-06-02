@@ -10,14 +10,14 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const hospitalImages = [
-  '/usinas/empresas/hospital-abaete/1.jpg',
-  '/usinas/empresas/hospital-abaete/2.jpg',
-  '/usinas/empresas/hospital-abaete/3.jpg',
-  '/usinas/empresas/hospital-abaete/4.jpg',
-  '/usinas/empresas/hospital-abaete/5.jpg',
-  '/usinas/empresas/hospital-abaete/6.jpg',
-  '/usinas/empresas/hospital-abaete/7.jpg',
-  '/usinas/empresas/hospital-abaete/8.jpg',
+  '/usinas/industrial/hospital_abaete/1.jpg',
+  '/usinas/industrial/hospital_abaete/2.jpg',
+  '/usinas/industrial/hospital_abaete/3.jpg',
+  '/usinas/industrial/hospital_abaete/4.jpg',
+  '/usinas/industrial/hospital_abaete/5.jpg',
+  '/usinas/industrial/hospital_abaete/6.jpg',
+  '/usinas/industrial/hospital_abaete/7.jpg',
+  '/usinas/industrial/hospital_abaete/8.jpg',
 ];
 
 const HospitalSection = () => {

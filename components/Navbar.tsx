@@ -56,7 +56,6 @@ const Navbar = () => {
               </a>
             </div>
 
-            {/* Contact Information - made responsive with flex-col on mobile */}
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6 text-sm">
               <div className="flex items-center">
                 <svg
@@ -99,7 +98,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Main Navbar */}
       <nav className="bg-[#1e1e1e] sticky top-0 z-50 shadow-lg">
         {/* Top section with logo and quote button */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -108,7 +106,7 @@ const Navbar = () => {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center group">
                 <Image
-                  src="/logo2-photon.png"
+                  src="/logo-photon.png"
                   alt="Photon Energia Logo"
                   width={180}
                   height={65}
