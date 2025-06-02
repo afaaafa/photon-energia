@@ -7,17 +7,19 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-source-sans",
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   title: "Photon Energia",
-  description: "Photon Energia",
+  description: "Photon Energia - Soluções em Energia Solar e Sustentabilidade",
   icons: {
     icon: '/favicon.ico',
   }
@@ -30,9 +32,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${montserrat.variable} ${sourceSans.variable}`}>
-      <body>
+      <body className="bg-background text-text-primary antialiased">
         <Navbar />
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );

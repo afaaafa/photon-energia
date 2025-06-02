@@ -55,19 +55,15 @@ const HeroSection = () => {
   const [isZoomed, setIsZoomed] = useState(false);
 
   useEffect(() => {
-    // Reset zoom state
     setIsZoomed(false);
-
-    // Apply zoom effect after a short delay
     const timer = setTimeout(() => {
       setIsZoomed(true);
     }, 100);
-
     return () => clearTimeout(timer);
   }, [activeSlide]);
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full bg-gradient-to-b from-[#0e0e0e] to-[#1a1a1a]">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation]}
         effect="fade"
@@ -84,7 +80,7 @@ const HeroSection = () => {
           setActiveSlide(swiper.activeIndex);
           setIsZoomed(false);
         }}
-        className="h-[500px] md:h-[600px]"
+        className="h-[600px] md:h-[800px]"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id} className="relative">
@@ -99,40 +95,52 @@ const HeroSection = () => {
                 priority={slide.id === 1}
                 quality={100}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0e0e0e]/90 via-[#0e0e0e]/70 to-[#1a1a1a]" />
             </div>
 
             <div className="relative z-10 h-full flex items-center">
               <div className="container mx-auto px-4">
-                <div className="max-w-3xl mx-auto text-center">
-                  <h2 className="subheading-hero text-4xl md:text-5xl text-white mb-4 opacity-0 translate-y-8 animate-fade-up">
-                    {slide.subtitle}
-                  </h2>
-                  <h1 className="heading-hero text-5xl md:text-7xl text-white mb-6 opacity-0 translate-y-8 animate-fade-up animation-delay-200">
+                <div className="max-w-4xl mx-auto text-center">
+                  <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6 opacity-0 translate-y-8 animate-fade-up">
+                    <span className="text-primary text-sm font-semibold tracking-wider uppercase">
+                      {slide.subtitle}
+                    </span>
+                  </div>
+                  <h1 className="heading-hero text-5xl md:text-7xl text-white mb-8 opacity-0 translate-y-8 animate-fade-up animation-delay-200 font-bold tracking-tight">
                     {slide.title}
                   </h1>
-                  <p className="body-text text-xl text-white/90 mb-8 opacity-0 translate-y-8 animate-fade-up animation-delay-400">
+                  <p className="body-text text-xl text-[#B0B0B0] mb-10 opacity-0 translate-y-8 animate-fade-up animation-delay-400 max-w-2xl mx-auto leading-relaxed">
                     {slide.description}
                   </p>
-                  <a
-                    href="/orcamento"
-                    className="body-text inline-flex items-center px-6 py-3 border border-white/20 text-base font-medium rounded-full text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 opacity-0 translate-y-8 animate-fade-up animation-delay-600"
-                  >
-                    Solicite seu orçamento
-                    <svg
-                      className="w-4 h-4 ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  <div className="flex gap-6 justify-center opacity-0 translate-y-8 animate-fade-up animation-delay-600">
+                    <a
+                      href="https://wa.me/553199595991?text=Olá,%20vi%20seu%20site%20e%20quero%20fazer%20um%20orçamento."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-8 py-4 bg-primary hover:bg-[#4596b2] text-white text-lg font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-primary/20"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </a>
+                      Solicite seu orçamento
+                      <svg
+                        className="w-5 h-5 ml-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="/sobre"
+                      className="inline-flex items-center px-8 py-4 bg-[#222222] text-white text-lg font-semibold rounded-full border-2 border-primary hover:bg-primary/10 transition-all duration-300"
+                    >
+                      Saiba mais
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -140,8 +148,8 @@ const HeroSection = () => {
         ))}
 
         {/* Navigation Buttons */}
-        <div className="swiper-button-prev !text-white !w-14 !h-14 !bg-black/30 !rounded-full hover:!bg-black/50 transition-colors"></div>
-        <div className="swiper-button-next !text-white !w-14 !h-14 !bg-black/30 !rounded-full hover:!bg-black/50 transition-colors"></div>
+        <div className="swiper-button-prev !text-primary !w-14 !h-14 !bg-[#0e0e0e]/80 !rounded-full hover:!bg-[#1a1a1a] transition-colors"></div>
+        <div className="swiper-button-next !text-primary !w-14 !h-14 !bg-[#0e0e0e]/80 !rounded-full hover:!bg-[#1a1a1a] transition-colors"></div>
       </Swiper>
     </section>
   );

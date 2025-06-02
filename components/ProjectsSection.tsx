@@ -74,91 +74,99 @@ const ProjectsSection = () => {
 
   return (
     <>
-      <section id="projetos" className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="heading-hero text-3xl md:text-4xl text-gray-900 mb-4">
-              Projetos Concluídos
-            </h2>
-            <p className="body-text text-lg text-gray-600 max-w-3xl mx-auto">
-              Conheça alguns dos nossos projetos de energia solar, realizados com
-              excelência e compromisso com a sustentabilidade
-            </p>
-          </div>
+      <section id="projetos" className="relative bg-background">
+        {/* Divisor estilizado */}
+        <div className="absolute top-0 left-0 right-0">
+          <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+          <div className="h-24 bg-gradient-to-b from-primary/5 to-transparent" />
+        </div>
 
-          {/* Projects Carousel */}
-          <div className="relative">
-            <Swiper
-              modules={[Navigation, Pagination, EffectFade, Autoplay]}
-              navigation
-              pagination={{ clickable: true }}
-              slidesPerView={1}
-              spaceBetween={20}
-              className="pb-12"
-              loop={true}
-              speed={800}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
-              }}
-            >
-              {allProjects.map((project, projectIndex) => (
-                <SwiperSlide key={projectIndex}>
-                  <div className="group bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
-                    {/* Project Images Carousel */}
-                    <div className="relative h-64">
-                      <Swiper
-                        modules={[EffectFade, Autoplay]}
-                        effect="fade"
-                        fadeEffect={{ crossFade: true }}
-                        className="h-full"
-                        loop={true}
-                        speed={500}
-                        autoplay={{
-                          delay: 3000,
-                          disableOnInteraction: false,
-                        }}
-                      >
-                        {project.images.map((image, imageIndex) => (
-                          <SwiperSlide key={imageIndex}>
-                            <div 
-                              className="relative h-full w-full cursor-pointer"
-                              onClick={() => handleImageClick(image, project)}
-                            >
-                              <Image
-                                src={image}
-                                alt={`Projeto ${project.category} - Imagem ${imageIndex + 1}`}
-                                fill
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                quality={90}
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            </div>
-                          </SwiperSlide>
-                        ))}
-                      </Swiper>
-                    </div>
+        <div className="pt-24 pb-16 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="heading-hero text-3xl md:text-4xl text-text-primary mb-4 font-bold">
+                Projetos Concluídos ✅ 
+              </h2>
+              <p className="body-text text-lg text-text-secondary max-w-3xl mx-auto">
+                Conheça alguns dos nossos projetos de energia solar, realizados com
+                excelência e compromisso com a sustentabilidade
+              </p>
+            </div>
 
-                    {/* Category Tag */}
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="px-3 py-1 text-xs font-semibold bg-white/90 text-gray-900 rounded-full shadow-lg backdrop-blur-sm">
-                        {project.category}
-                      </span>
+            {/* Projects Carousel */}
+            <div className="relative">
+              <Swiper
+                modules={[Navigation, Pagination, EffectFade, Autoplay]}
+                navigation
+                pagination={{ clickable: true }}
+                slidesPerView={1}
+                spaceBetween={20}
+                className="pb-12 project-swiper"
+                loop={true}
+                speed={800}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                  },
+                }}
+              >
+                {allProjects.map((project, projectIndex) => (
+                  <SwiperSlide key={projectIndex}>
+                    <div className="group bg-background-alt rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border border-primary/10">
+                      {/* Project Images Carousel */}
+                      <div className="relative h-64">
+                        <Swiper
+                          modules={[EffectFade, Autoplay]}
+                          effect="fade"
+                          fadeEffect={{ crossFade: true }}
+                          className="h-full"
+                          loop={true}
+                          speed={500}
+                          autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                          }}
+                        >
+                          {project.images.map((image, imageIndex) => (
+                            <SwiperSlide key={imageIndex}>
+                              <div 
+                                className="relative h-full w-full cursor-pointer"
+                                onClick={() => handleImageClick(image, project)}
+                              >
+                                <Image
+                                  src={image}
+                                  alt={`Projeto ${project.category} - Imagem ${imageIndex + 1}`}
+                                  fill
+                                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                  quality={90}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                              </div>
+                            </SwiperSlide>
+                          ))}
+                        </Swiper>
+                      </div>
+
+                      {/* Category Tag */}
+                      <div className="absolute top-4 left-4 z-10">
+                        <span className="px-3 py-1 text-xs font-semibold bg-primary text-text-primary rounded-full shadow-lg">
+                          {project.category}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
       </section>
@@ -166,11 +174,11 @@ const ProjectsSection = () => {
       {/* Image Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/95"
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-300"
+            className="absolute top-4 right-4 text-text-primary hover:text-primary transition-colors duration-300"
             onClick={() => setSelectedImage(null)}
           >
             <svg
@@ -190,7 +198,7 @@ const ProjectsSection = () => {
 
           {/* Navigation Buttons */}
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors duration-300"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-text-primary hover:text-primary transition-colors duration-300"
             onClick={(e) => {
               e.stopPropagation();
               handlePrevImage();
@@ -211,7 +219,7 @@ const ProjectsSection = () => {
             </svg>
           </button>
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors duration-300"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-text-primary hover:text-primary transition-colors duration-300"
             onClick={(e) => {
               e.stopPropagation();
               handleNextImage();

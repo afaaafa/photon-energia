@@ -12,7 +12,7 @@ interface SolutionCardProps {
 
 const SolutionCard = ({ title, description, imageSrc, icon }: SolutionCardProps) => {
   return (
-    <div className="relative bg-white/5 rounded-2xl overflow-hidden shadow-xl backdrop-blur-sm border border-white/10">
+    <div className="relative bg-background-alt rounded-2xl overflow-hidden shadow-xl border border-primary/10">
       <div className="relative h-56 w-full overflow-hidden">
         <Image
           src={imageSrc}
@@ -20,20 +20,20 @@ const SolutionCard = ({ title, description, imageSrc, icon }: SolutionCardProps)
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
         
         <div className="absolute top-4 right-4 z-20">
-          <div className="p-3 bg-[#5ab7de]/90 rounded-xl backdrop-blur-sm border border-[#5ab7de]/20 shadow-lg">
+          <div className="p-3 bg-primary rounded-xl shadow-lg border border-primary/20">
             {icon}
           </div>
         </div>
       </div>
       
       <div className="relative z-20 p-8">
-        <h3 className="text-2xl font-bold text-white mb-4">
+        <h3 className="text-2xl font-bold text-text-primary mb-4">
           {title}
         </h3>
-        <p className="text-gray-300 leading-relaxed">
+        <p className="text-text-secondary leading-relaxed">
           {description}
         </p>
       </div>
@@ -47,44 +47,44 @@ export default function SolutionsSection() {
       title: "Residencial",
       description: "Transforme sua casa em uma fonte de energia sustentável com painéis solares e diminua significativamente os custos da sua conta de luz.",
       imageSrc: "/usinas/residencial/residencial_01/1.jpeg",
-      icon: <Home className="w-6 h-6 text-white" />
+      icon: <Home className="w-6 h-6 text-text-primary" />
     },
     {
       title: "Industrial",
       description: "Impulsione seu negócio com energia solar. Além de economizar mais, estará demonstrando seu compromisso com a responsabilidade ambiental.",
       imageSrc: "/usinas/industrial/sempel/1.jpeg",
-      icon: <Building2 className="w-6 h-6 text-white" />
+      icon: <Building2 className="w-6 h-6 text-text-primary" />
     },
     {
       title: "Rural",
       description: "Amplie a produtividade rural com a adoção de energia solar, garantindo ainda mais eficiência energética e maior sustentabilidade no campo.",
       imageSrc: "/usinas/rural/rural_paineras/1.jpeg",
-      icon: <Tractor className="w-6 h-6 text-white" />
+      icon: <Tractor className="w-6 h-6 text-text-primary" />
     }
   ];
 
   return (
-    <section className="py-32 bg-[#1e1e1e] relative overflow-hidden border-t border-white/5">
+    <section className="py-32 bg-background relative overflow-hidden border-t border-primary/10">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#5ab7de] rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2ecc71] rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/50 rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-[#5ab7de]/10 border border-[#5ab7de]/20 rounded-full mb-6">
-            <span className="text-[#5ab7de] text-sm font-semibold tracking-wider uppercase">
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
+            <span className="text-primary text-sm font-semibold tracking-wider uppercase">
               Soluções
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 leading-tight">
             Energia solar para
-            <span className="block text-transparent bg-gradient-to-r from-[#5ab7de] to-[#4a9bc5] bg-clip-text">
+            <span className="block text-primary">
               todas as necessidades
             </span>
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Descubra como nossa tecnologia solar pode transformar seu consumo energético
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function SolutionsSection() {
             href="https://wa.me/553199595991?text=Olá,%20vi%20seu%20site%20e%20quero%20fazer%20um%20orçamento."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#2ecc71] to-[#27ae60] text-white font-semibold rounded-2xl shadow-xl border border-[#2ecc71]/20"
+            className="btn-primary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-2xl shadow-xl hover:shadow-primary/20"
           >
             <svg 
               className="w-6 h-6 mr-3" 
@@ -120,7 +120,7 @@ export default function SolutionsSection() {
             <span>Quero Economizar com Energia Solar</span>
           </a>
           
-          <p className="text-gray-500 text-sm mt-4">
+          <p className="text-text-secondary text-sm mt-4">
             Resposta rápida • Comprometimento • Transparência
           </p>
         </div>

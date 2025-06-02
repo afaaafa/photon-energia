@@ -34,26 +34,41 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Dúvidas frequentes
-        </h2>
-        <div className="w-16 h-1 bg-[#5ab7de] mx-auto mb-12"></div>
+    <section className="py-16 bg-background relative">
+      {/* Divisor superior */}
+      <div className="absolute top-0 left-0 right-0">
+        <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        <div className="h-24 bg-gradient-to-b from-primary/5 to-transparent" />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
+            <span className="text-primary text-sm font-semibold tracking-wider uppercase">
+              FAQ
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            Dúvidas frequentes
+          </h2>
+          <p className="text-text-secondary max-w-2xl mx-auto">
+            Encontre respostas para as perguntas mais comuns sobre energia solar
+          </p>
+        </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg overflow-hidden"
+              className="bg-background-alt rounded-xl overflow-hidden border border-primary/10 transition-all duration-300 hover:border-primary/20"
               onClick={() => toggleFAQ(index)}
             >
               <button
                 className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none group"
               >
-                <span className="font-medium text-gray-900">{faq.question}</span>
+                <span className="font-medium text-text-primary">{faq.question}</span>
                 <svg
-                  className={`w-6 h-6 text-[#5ab7de] transform transition-transform duration-200 ${
+                  className={`w-6 h-6 text-primary transform transition-transform duration-200 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -75,7 +90,7 @@ const FAQSection = () => {
                 }`}
               >
                 <div className="px-6 pb-4">
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <p className="text-text-secondary">{faq.answer}</p>
                 </div>
               </div>
             </div>

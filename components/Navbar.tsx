@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div>
-      {/* Top bar with contact info and social media - made responsive */}
-      <div className="bg-[#5ab7de]">
+    <div className="relative z-50">
+      {/* Top bar with contact info and social media */}
+      <div className="bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
             {/* Social Media Links */}
@@ -19,7 +19,7 @@ const Navbar = () => {
                 className="hover:opacity-80 transition-opacity"
               >
                 <svg
-                  className="h-4 w-4 text-white fill-current"
+                  className="h-4 w-4 text-text-primary fill-current"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -33,7 +33,7 @@ const Navbar = () => {
                 className="hover:opacity-80 transition-opacity"
               >
                 <svg
-                  className="h-4 w-4 text-white fill-current"
+                  className="h-4 w-4 text-text-primary fill-current"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -47,7 +47,7 @@ const Navbar = () => {
                 className="hover:opacity-80 transition-opacity"
               >
                 <svg
-                  className="h-4 w-4 text-white fill-current"
+                  className="h-4 w-4 text-text-primary fill-current"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -60,7 +60,7 @@ const Navbar = () => {
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 mr-2 text-white"
+                  className="h-4 w-4 mr-2 text-text-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -72,12 +72,12 @@ const Navbar = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="topbar-text">+55 (31) 3471-2238</span>
+                <span className="text-text-primary">+55 (31) 3471-2238</span>
               </div>
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 mr-2 text-white"
+                  className="h-4 w-4 mr-2 text-text-primary"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -89,7 +89,7 @@ const Navbar = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="topbar-text">
+                <span className="text-text-primary">
                   comercial@photonenergia.com.br
                 </span>
               </div>
@@ -98,7 +98,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="bg-[#1e1e1e] sticky top-0 z-50 shadow-lg">
+      <nav className="bg-background sticky top-0 z-50 shadow-lg border-b border-primary/10">
         {/* Top section with logo and quote button */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex justify-between items-center">
@@ -113,12 +113,12 @@ const Navbar = () => {
                   className="h-16 w-auto"
                   priority
                 />
-                <div className="ml-4 border-l border-gray-700 pl-4">
-                  <span className="text-sm font-medium text-gray-300 tracking-wide">
+                <div className="ml-4 border-l border-text-secondary/20 pl-4">
+                  <span className="text-sm font-medium text-text-secondary tracking-wide">
                     Engenharia de
                   </span>
                   <br />
-                  <span className="text-sm font-semibold text-[#5ab7de] tracking-wide">
+                  <span className="text-sm font-semibold text-primary tracking-wide">
                     Sustentabilidade
                   </span>
                 </div>
@@ -128,7 +128,7 @@ const Navbar = () => {
             {/* Quote Button - Hidden on mobile */}
             <Link
               href="https://wa.me/553199595991?text=Ol%C3%A1,%20vi%20seu%20site%20e%20quero%20fazer%20um%20or%C3%A7amento."
-              className="hidden sm:inline-flex btn-quote items-center px-8 py-3 border border-transparent text-sm font-semibold rounded-full text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="hidden sm:inline-flex btn-primary items-center px-8 py-3 text-sm font-semibold rounded-full text-text-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ const Navbar = () => {
         </div>
 
         {/* Bottom section with navigation links */}
-        <div className="border-t border-gray-700/50">
+        <div className="border-t border-text-secondary/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-center space-x-12 py-4">
               <a
@@ -158,7 +158,7 @@ const Navbar = () => {
                 className="nav-link px-4 py-2 text-sm font-medium relative group cursor-pointer"
               >
                 Projetos
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[#5ab7de] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
 
               <a
@@ -166,7 +166,7 @@ const Navbar = () => {
                 className="nav-link px-4 py-2 text-sm font-medium relative group cursor-pointer"
               >
                 Sobre a Photon
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[#5ab7de] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </a>
             </div>
           </div>
@@ -176,7 +176,7 @@ const Navbar = () => {
         <div className="lg:hidden absolute right-4 top-4">
           <button
             type="button"
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            className="inline-flex items-center justify-center p-2 rounded-md text-text-secondary hover:text-text-primary hover:bg-text-secondary/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -201,7 +201,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         <div className="lg:hidden hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1e1e1e]">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-background">
             <a
               href="#projetos"
               className="nav-link block px-3 py-2 text-base font-medium"

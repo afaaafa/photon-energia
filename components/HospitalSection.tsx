@@ -24,13 +24,21 @@ const HospitalSection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 bg-background relative">
+      {/* Gradiente de fundo */}
+      <div className="absolute inset-0 bg-gradient-complex opacity-5"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="heading-hero text-3xl md:text-4xl text-gray-900 mb-4">
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
+            <span className="text-primary text-sm font-semibold tracking-wider uppercase">
+              Caso de Sucesso
+            </span>
+          </div>
+          <h2 className="heading-hero text-3xl md:text-4xl text-text-primary mb-4 font-bold">
             Projeto Hospital São Vicente de Paulo
           </h2>
-          <p className="body-text text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="body-text text-lg text-text-secondary max-w-3xl mx-auto">
             Um projeto especial que transformou o Hospital de Abaeté em uma referência
             em sustentabilidade e eficiência energética na cidade
           </p>
@@ -38,7 +46,7 @@ const HospitalSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Imagem de Capa */}
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-primary/10">
             <Image
               src="/hospital.jpg"
               alt="Hospital de Abaeté"
@@ -51,14 +59,14 @@ const HospitalSection = () => {
           </div>
 
           {/* Carrossel de Imagens */}
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-primary/10">
             <Swiper
               modules={[Navigation, Pagination, EffectFade, Autoplay]}
               navigation
               pagination={{ clickable: true }}
               effect="fade"
               fadeEffect={{ crossFade: true }}
-              className="h-full"
+              className="h-full project-swiper"
               loop={true}
               speed={500}
               autoplay={{
@@ -91,10 +99,10 @@ const HospitalSection = () => {
 
         {/* Informações do Projeto */}
         <div className="mt-12 grid md:grid-cols-2 gap-8">
-          <div className="bg-gray-50 p-6 rounded-xl">
+          <div className="bg-background-alt p-6 rounded-xl border border-primary/10">
             <div className="flex items-center gap-3 mb-3">
               <svg
-                className="w-6 h-6 text-green-600"
+                className="w-6 h-6 text-primary"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -106,14 +114,14 @@ const HospitalSection = () => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <h3 className="heading-hero text-xl text-gray-900">Potência Instalada</h3>
+              <h3 className="heading-hero text-xl text-text-primary font-semibold">Potência Instalada</h3>
             </div>
-            <p className="body-text text-gray-600">75 kWp</p>
+            <p className="body-text text-text-secondary">75 kWp</p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-xl">
+          <div className="bg-background-alt p-6 rounded-xl border border-primary/10">
             <div className="flex items-center gap-3 mb-3">
               <svg
-                className="w-6 h-6 text-green-600"
+                className="w-6 h-6 text-primary"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -131,9 +139,9 @@ const HospitalSection = () => {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <h3 className="heading-hero text-xl text-gray-900">Localização</h3>
+              <h3 className="heading-hero text-xl text-text-primary font-semibold">Localização</h3>
             </div>
-            <p className="body-text text-gray-600">Abaeté, MG</p>
+            <p className="body-text text-text-secondary">Abaeté, MG</p>
           </div>
         </div>
       </div>
@@ -141,11 +149,11 @@ const HospitalSection = () => {
       {/* Modal de Imagem */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/95"
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-300"
+            className="absolute top-4 right-4 text-text-primary hover:text-primary transition-colors duration-300"
             onClick={() => setSelectedImage(null)}
           >
             <svg
