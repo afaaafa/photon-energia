@@ -246,15 +246,15 @@ const HeroSection = () => {
           </SwiperSlide>
         ))}
 
-        {/* Navigation Buttons */}
-        <button className="hero-button-prev group absolute left-8 top-1/2 transform -translate-y-1/2 z-30 w-16 h-16 lg:w-20 lg:h-20 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 hover:border-white/40 hover:scale-110 transition-all duration-500 shadow-2xl">
-          <svg className="w-7 h-7 lg:w-8 lg:h-8 mx-auto transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+        {/* Navigation Buttons - Ocultos no mobile, visíveis apenas em tablet+ */}
+        <button className="hero-button-prev group absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 hover:border-white/40 hover:scale-110 transition-all duration-500 shadow-2xl hidden sm:flex items-center justify-center">
+          <svg className="w-5 h-5 md:w-7 md:h-7 lg:w-8 lg:h-8 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
-        <button className="hero-button-next group absolute right-8 top-1/2 transform -translate-y-1/2 z-30 w-16 h-16 lg:w-20 lg:h-20 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 hover:border-white/40 hover:scale-110 transition-all duration-500 shadow-2xl">
-          <svg className="w-7 h-7 lg:w-8 lg:h-8 mx-auto transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+        <button className="hero-button-next group absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-30 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 hover:border-white/40 hover:scale-110 transition-all duration-500 shadow-2xl hidden sm:flex items-center justify-center">
+          <svg className="w-5 h-5 md:w-7 md:h-7 lg:w-8 lg:h-8 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
