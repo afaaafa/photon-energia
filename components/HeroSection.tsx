@@ -23,6 +23,16 @@ const slides = [
   },
   {
     id: 2,
+    image: "/banners/hero-gpt-bomba.png",
+    title: "Bombeamento Solar",
+    subtitle: "Bomba Solar",
+    description:
+      "Construa seu sistema, independente do tamanho, sem necessidade de energia da rede",
+    gradient: "from-blue-900/40 via-blue-800/30 to-blue-900/60",
+    accent: "blue",
+  },
+  {
+    id: 3,
     image: "/banners/hero-treinamentos.jpeg",
     title: "Treinamentos",
     subtitle: "Capacitação Profissional",
@@ -32,7 +42,7 @@ const slides = [
     accent: "blue",
   },
   {
-    id: 3,
+    id: 4,
     image: "/banners/hero-sustentabilidade.jpg",
     title: "Sustentabilidade",
     subtitle: "Compromisso com o Futuro",
@@ -41,7 +51,7 @@ const slides = [
     accent: "green",
   },
   {
-    id: 4,
+    id: 5,
     image: "/banners/hero-eficiencia.jpg",
     title: "Eficiência Energética",
     subtitle: "Otimização e Economia",
@@ -49,17 +59,7 @@ const slides = [
       "Maximize o uso da energia e minimize custos com nossas soluções",
     gradient: "from-orange-900/40 via-orange-800/30 to-orange-900/60",
     accent: "orange",
-  },
-  {
-    id: 5,
-    image: "/banners/hero-iluminacoes.jpg",
-    title: "Iluminação Industrial",
-    subtitle: "Segurança e Economia",
-    description:
-      "Iluminação inteligente e eficiente para ambientes industriais",
-    gradient: "from-purple-900/40 via-purple-800/30 to-purple-900/60",
-    accent: "purple",
-  },
+  }
 ];
 
 const HeroSection = () => {
@@ -286,17 +286,6 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <div className="flex flex-col items-center space-y-2">
-          <div className="w-8 h-12 border-2 border-white/40 rounded-full flex justify-center backdrop-blur-sm">
-            <div className="w-1.5 h-4 bg-white rounded-full mt-2 animate-pulse"></div>
-          </div>
-          <span className="text-white/60 text-xs font-medium tracking-wider uppercase">Scroll</span>
-        </div>
-      </div>
-
-      {/* Floating Elements */}
       <div className="absolute top-20 left-10 z-20 opacity-20">
         <div className="w-4 h-4 bg-white rounded-full animate-float"></div>
       </div>
