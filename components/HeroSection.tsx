@@ -82,7 +82,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section id="home" className="relative w-full h-screen overflow-hidden">
       {/* Background pattern overlay */}
       <div className="absolute inset-0 z-[1] opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
@@ -221,7 +221,7 @@ const HeroSection = () => {
                     </a>
                     
                     <a
-                      href="#sobre"
+                      href="#solucoes"
                       className="group inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-md text-white text-lg font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-500"
                     >
                       <span>Saiba mais</span>

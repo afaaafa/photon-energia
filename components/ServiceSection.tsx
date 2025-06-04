@@ -10,7 +10,6 @@ import {
 
 const ServiceCard = ({ icon: Icon, title, description, features }: any) => (
   <div className="group relative bg-gradient-to-b from-background-alt to-background/80 border border-primary/10 rounded-xl p-6 transition-all duration-300 hover:border-primary/30">
-    {/* Efeito de brilho no hover */}
     <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
     
     <div className="relative">
@@ -95,21 +94,6 @@ export default function ServicesSection() {
 
   return (
     <section className="relative">
-      {/* Gradiente de fundo principal */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-      
-      {/* Efeitos decorativos */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-20" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-20" />
-      </div>
-
-      {/* Gradiente de transição superior */}
-      <div className="absolute top-0 left-0 right-0">
-        <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <div className="h-24 bg-gradient-to-b from-primary/5 to-transparent" />
-      </div>
-
       <div className="relative pt-24 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -129,8 +113,7 @@ export default function ServicesSection() {
               exigências regulatórias.
             </p>
           </div>
-
-          {/* Seção explicativa sobre o Mercado Livre de Energia */}
+          
           <div className="bg-gradient-to-br from-background-alt/80 to-background-alt border border-primary/10 rounded-2xl p-8 mb-16 backdrop-blur-sm">
             <div className="max-w-4xl mx-auto">
               <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-text-primary to-primary bg-clip-text text-transparent">

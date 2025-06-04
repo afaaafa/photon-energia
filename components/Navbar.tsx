@@ -19,8 +19,10 @@ const Navbar = () => {
   const navItems = [
     { name: 'Início', href: '#home' },
     { name: 'Projetos', href: '#projetos' },
-    { name: 'Serviços', href: '#servicos' },
-    { name: 'Sobre', href: '#sobre' },
+    { name: 'Soluções', href: '#solucoes' },
+    { name: 'FAQ', href: '#faq' },
+    { name: 'Sobre a Photon', href: '#sobre' }
+    
   ];
 
   return (
