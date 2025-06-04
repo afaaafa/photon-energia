@@ -65,31 +65,39 @@ p {
 /* Botões */
 .btn-primary {
   background-color: var(--primary);
-  color: white;
+  color: var(--background);
   font-weight: 600;
-  transition: all 0.2s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 183, 222, 0.2);
 }
 
 .btn-secondary {
-  background-color: var(--button-secondary);
+  background-color: transparent;
   border: 2px solid var(--primary);
-  color: var(--text-primary);
+  color: var(--primary);
   font-weight: 600;
-  transition: all 0.2s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
   background-color: var(--primary);
-  color: white;
+  color: var(--text-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 183, 222, 0.2);
 }
 
-/* Links */
 a {
-  color: var(--primary);
   transition: color 0.2s ease;
 }
 
@@ -195,24 +203,36 @@ a:hover {
 /* Button styles */
 .btn-monitoring {
   background-color: var(--orange);
-  transition: background-color 0.2s ease;
+  color: var(--text-primary);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-monitoring:hover {
   background-color: var(--orange-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
 }
 
 .btn-quote {
   background-color: var(--green);
-  transition: background-color 0.2s ease;
+  color: var(--text-primary);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-quote:hover {
   background-color: var(--green-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
 }
 
 /* Animations */
