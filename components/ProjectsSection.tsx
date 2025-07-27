@@ -42,7 +42,7 @@ const ProjectsSection = () => {
     for (const [key, value] of Object.entries(imagesMap.rural)) {
       projects.push({
         images: value.images,
-        category: "Rural"
+        category: "Agronegócio"
       });
     }
     
@@ -109,7 +109,7 @@ const ProjectsSection = () => {
               
               <p className="text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
                 Descubra nossos projetos de energia solar implementados com excelência, 
-                transformando residências, indústrias e propriedades rurais em fontes de energia limpa
+                transformando residências, indústrias e agronegócios em fontes de energia limpa
               </p>
             </div>
 

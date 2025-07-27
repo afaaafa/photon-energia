@@ -56,8 +56,8 @@ export default function SolutionsSection() {
       icon: <Building2 className="w-6 h-6 text-text-primary" />
     },
     {
-      title: "Rural",
-      description: "Amplie a produtividade rural com a adoção de energia solar, garantindo ainda mais eficiência energética e maior sustentabilidade no campo.",
+      title: "Agronegócio",
+      description: "Amplie a produtividade com a adoção de energia solar, garantindo ainda mais eficiência energética e maior sustentabilidade no campo.",
       imageSrc: "/usinas/rural/rural_paineras/1.jpeg",
       icon: <Tractor className="w-6 h-6 text-text-primary" />
     }
