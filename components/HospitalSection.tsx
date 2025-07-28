@@ -21,7 +21,7 @@ const hospitalImages = [
 ];
 
 const HospitalSection = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
     <section className="py-16 bg-background relative">
@@ -79,7 +79,7 @@ const HospitalSection = () => {
                 <SwiperSlide key={index}>
                   <div 
                     className="relative h-full w-full cursor-pointer"
-                    onClick={() => setSelectedImage(image)}
+                    onClick={() => setSelectedIndex(index)}
                   >
                     <Image
                       src={image}
@@ -146,43 +146,68 @@ const HospitalSection = () => {
         </div>
       </div>
 
-      {/* Modal de Imagem */}
-      {selectedImage && (
+      {/* Modal de Imagem com Navegação */}
+      {selectedIndex !== null && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-background/95"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedIndex(null)}
         >
-          <button
-            className="absolute top-4 right-4 text-text-primary hover:text-primary transition-colors duration-300"
-            onClick={() => setSelectedImage(null)}
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
+          {/* Conteúdo do modal */}
           <div 
-            className="relative w-full h-full max-w-7xl max-h-[90vh] p-4"
+            className="relative w-full h-full max-w-7xl max-h-[90vh] p-4 flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={selectedImage}
-              alt="Imagem em tela cheia"
-              fill
-              className="object-contain"
-              quality={100}
-              priority
-            />
+            {/* Botão Fechar */}
+            <button
+              className="absolute top-4 right-4 text-text-primary hover:text-primary transition-colors duration-300 z-10"
+              onClick={() => setSelectedIndex(null)}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Botão Anterior */}
+            <button
+              className="absolute left-4 text-text-primary hover:text-primary transition-colors duration-300 z-10"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedIndex((prev) =>
+                  prev === 0 ? hospitalImages.length - 1 : (prev ?? 0) - 1
+                );
+              }}
+            >
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M15 19l-7-7 7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+
+            {/* Botão Próximo */}
+            <button
+              className="absolute right-4 text-text-primary hover:text-primary transition-colors duration-300 z-10"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedIndex((prev) =>
+                  prev === hospitalImages.length - 1 ? 0 : (prev ?? 0) + 1
+                );
+              }}
+            >
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+
+            {/* Imagem no modal */}
+            <div className="relative w-full h-full">
+              <Image
+                src={hospitalImages[selectedIndex]}
+                alt={`Imagem ${selectedIndex + 1}`}
+                fill
+                className="object-contain"
+                quality={100}
+                priority
+              />
+            </div>
           </div>
         </div>
       )}
@@ -190,4 +215,4 @@ const HospitalSection = () => {
   );
 };
 
-export default HospitalSection; 
+export default HospitalSection;

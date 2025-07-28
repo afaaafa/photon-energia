@@ -9,16 +9,23 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 const partners = [
-  { src: "/partners/logo-absolar.jpg", alt: "Absolar" },
   { src: "/partners/logo-aldo.jpg", alt: "Aldo" },
-  { src: "/partners/logo-bv-financeira.jpg", alt: "BV Financeira" },
-  { src: "/partners/logo-cmu.jpg", alt: "CMU" },
-  { src: "/partners/logo-ecori.jpg", alt: "Ecori" },
-  { src: "/partners/logo-loja-eletrica.jpg", alt: "Loja Elétrica" },
-  { src: "/partners/logo-minha-casa-solar.jpg", alt: "Minha Casa Solar" },
-  { src: "/partners/logo-portal-solar.jpg", alt: "Portal Solar" },
-  { src: "/partners/logo-sices.jpg", alt: "Sices" },
-  { src: "/partners/logo-weg.jpg", alt: "WEG" },
+  { src: "/partners/logo-belenergy.jpg", alt: "Belenergy" },
+  { src: "/partners/logo-belmicro.jpg", alt: "Belmicro" },
+  { src: "/partners/logo-corsolar.jpg", alt: "Corsolar" },
+  { src: "/partners/logo-dah-solar.jpg", alt: "DAH Solar" },
+  { src: "/partners/logo-fortlev.jpg", alt: "Fortlev" },
+  { src: "/partners/logo-fronius.jpg", alt: "Fronius" },
+  { src: "/partners/logo-huawei.jpg", alt: "Huawei" },
+  { src: "/partners/logo-jasolar.jpg", alt: "JA Solar" },
+  { src: "/partners/logo-jinko.jpg", alt: "Jinko" },
+  { src: "/partners/logo-sbsolar.jpg", alt: "SB Solar" },
+  { src: "/partners/logo-sma.jpg", alt: "SMA" },
+  { src: "/partners/logo-solis-inverters.jpg", alt: "Solis Inverters" },
+  { src: "/partners/logo-sunova.jpg", alt: "Sunova" },
+  { src: "/partners/logo-trinasolar.jpg", alt: "Trina Solar" },
+  { src: "/partners/logo-znshine.jpg", alt: "Znshine" },
+  { src: "/partners/logo_weg.jpg", alt: "WEG" },
 ];
 
 const PartnersSection: React.FC = () => {

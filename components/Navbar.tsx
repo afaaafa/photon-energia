@@ -88,6 +88,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="https://wa.me/553199595991?text=Ol%C3%A1,%20vi%20seu%20site%20e%20quero%20fazer%20um%20or%C3%A7amento."
+              target="_blank"
               className={`relative inline-flex items-center px-4 sm:px-6 py-2 sm:py-2.5 text-sm font-semibold rounded-full shadow-lg transition-all duration-300 group !no-underline ${
                 isScrolled
                   ? "bg-[var(--primary)] text-[var(--background)] hover:bg-[var(--primary-hover)] hover:shadow-xl hover:shadow-[var(--primary)]/25"
