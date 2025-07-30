@@ -4,7 +4,6 @@ import React from "react";
 import {
   Mail,
   MapPin,
-  Phone,
   Facebook,
   Instagram,
   Linkedin,
@@ -57,10 +56,6 @@ const Footer: React.FC = () => {
                   Rua Cônsul Robert Levy, n° 1.010, 
                   São Bento 30350-710 – Belo Horizonte – MG
                 </span>
-              </li>
-              <li className="flex items-center justify-center md:justify-start text-text-secondary">
-                <Phone className="mr-3 text-primary" size={20} />
-                <span className="text-sm">(31) 3291-9143</span>
               </li>
               <li className="flex items-center justify-center md:justify-start text-text-secondary">
                 <Mail className="mr-3 text-primary" size={20} />
